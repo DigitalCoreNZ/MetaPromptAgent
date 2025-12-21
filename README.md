@@ -136,15 +136,26 @@ python install.py
 
 > IMPORTANT NOTES: Replace the '/path/to' with the _actual_, absolute path to the '.bmad' directory. Also, pay attention to the indentation of the new entry, i.e. ensure the new block as listed above is aligned with the existing entries.
 
-## Uninstalling the MetaPromptAgent
+### The Bash Script Uninstaller
 
-**Step 1:** Run the uninstall script:
+**Step 1:** Change the mode of the 'uninstall.sh' script to an executable file:
+
+```bash
+chmod +x uninstall.sh
+```
+**Step 2:** Run the 'uninstall.sh' script:
+
+```bash
+./uninstall.sh
+```
+
+## The Bash Script Uninstaller
+
+**Step 1:** Run the Python uninstall script:
 
 ```bash
 python uninstall.py
 ```
-
-
 
 ## Usage
 
