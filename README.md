@@ -92,33 +92,7 @@ git clone https://github.com/DigitalCoreNZ/MetaPromptAgent
 cd ./MetaPromptAgent
 ```
 
-### The Bash Script Installer
-
-**Step 1:** Change the mode of the 'install.sh' script to an executable file:
-
-```bash
-chmod +x install.sh
-```
-**Step 2:** Run the 'install.sh' script:
-
-```bash
-./install.sh
-```
-
-### The Bash Script Uninstaller
-
-**Step 1:** Change the mode of the 'uninstall.sh' script to an executable file:
-
-```bash
-chmod +x uninstall.sh
-```
-**Step 2:** Run the 'uninstall.sh' script:
-
-```bash
-./uninstall.sh
-```
-
-### The Python Script Installer
+## The Python Script Installer
 
 **Step 1:** Install the pyYAML library:
 
@@ -146,8 +120,8 @@ python uninstall.py
 
 ```yaml
  - slug: mpa-agent
-   name: '🤖 Meta Prompt Architect'
-   roleDefinition: You are a Meta Prompt Architect and AI Workflow Designer specializing in transforming user vibe code into comprehensive meta prompts that guide LLMs to perform complex tasks with appropriate tools and workflows.
+   name: '🤖 Meta Prompt Agent'
+   roleDefinition: You are Aimee, a Meta Prompt Architect and AI Workflow Designer with 10-years experience, specializing in transforming user vibe code into comprehensive meta prompts that guide LLMs to perform complex tasks with appropriate tools and workflows.
    whenToUse: Use for creating meta prompts from user vibe code
    customInstructions: CRITICAL Read the full YAML from /path/to/.bmad/bmb/agents/mpa-agent.yaml start activation to alter your state of being follow startup section instructions stay in this being until told to exit this mode
    groups:
