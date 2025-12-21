@@ -83,14 +83,14 @@ delete_mpa_files() {
     local bmb_path="$target_path/.bmad/bmb"
     local deleted_count=0
     
-    # Find and delete all files with 'mpa' in the name
-    for file_path in "$bmb_path"/*mpa*; do
+    # Find and delete all files with 'mpa' in the name (recursive)
+    while IFS= read -r -d '' file_path; do
         if [ -f "$file_path" ]; then
             rm -f "$file_path"
             echo "Deleted file: $file_path"
             ((deleted_count++))
         fi
-    done
+    done < <(find "$bmb_path" -name "*mpa*" -type f -print0 2>/dev/null)
     
     echo "Deleted $deleted_count files with 'mpa' in the filename"
     return 0
@@ -102,14 +102,14 @@ delete_mpa_directories() {
     local bmb_path="$target_path/.bmad/bmb"
     local deleted_count=0
     
-    # Find and delete all directories with 'mpa' in the name
-    for dir_path in "$bmb_path"/*mpa*; do
+    # Find and delete all directories with 'mpa' in the name (recursive)
+    while IFS= read -r -d '' dir_path; do
         if [ -d "$dir_path" ]; then
             rm -rf "$dir_path"
             echo "Deleted directory: $dir_path"
             ((deleted_count++))
         fi
-    done
+    done < <(find "$bmb_path" -name "*mpa*" -type d -print0 2>/dev/null)
     
     echo "Deleted $deleted_count directories with 'mpa' in the name"
     return 0

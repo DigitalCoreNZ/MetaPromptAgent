@@ -78,8 +78,8 @@ def delete_mpa_files(target_path):
     deleted_count = 0
     
     try:
-        # Find all files with 'mpa' in the name
-        for file_path in glob.glob(os.path.join(bmb_path, "*mpa*")):
+        # Find all files with 'mpa' in the name (recursive)
+        for file_path in glob.glob(os.path.join(bmb_path, "**", "*mpa*"), recursive=True):
             if os.path.isfile(file_path):
                 os.remove(file_path)
                 print(f"Deleted file: {file_path}")
@@ -99,8 +99,8 @@ def delete_mpa_directories(target_path):
     deleted_count = 0
     
     try:
-        # Find all directories with 'mpa' in the name
-        for dir_path in glob.glob(os.path.join(bmb_path, "*mpa*")):
+        # Find all directories with 'mpa' in the name (recursive)
+        for dir_path in glob.glob(os.path.join(bmb_path, "**", "*mpa*"), recursive=True):
             if os.path.isdir(dir_path):
                 shutil.rmtree(dir_path)
                 print(f"Deleted directory: {dir_path}")
