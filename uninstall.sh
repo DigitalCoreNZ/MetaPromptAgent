@@ -18,8 +18,9 @@ find_bmad_directory() {
         # Check if we can see the .bmad directory at the provided location
         bmad_path="$location/.bmad"
         if [ -d "$bmad_path" ]; then
-            # Convert to absolute path
+            # Convert to absolute path and set global variable
             TARGET_PATH=$(cd "$location" && pwd)
+            export TARGET_PATH
             return 0
         fi
         
@@ -28,8 +29,9 @@ find_bmad_directory() {
             parent_dir=$(dirname "$location")
             bmad_path="$parent_dir/.bmad"
             if [ -d "$bmad_path" ]; then
-                # Convert to absolute path
+                # Convert to absolute path and set global variable
                 TARGET_PATH=$(cd "$parent_dir" && pwd)
+                export TARGET_PATH
                 return 0
             fi
         fi
