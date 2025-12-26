@@ -28,11 +28,11 @@ Are you in a position to help build this utility?
 Create a Python script that:
 1. Changes the names of the following files and directories, and
 2. As each file or directory name is changed, reflect that change across the rest of the project files, before changing the next file or directory name:
-- '.bmad/bmb/agents/mpa-agent.yaml' to 'mpa-agent.yaml',
+- '.bmad/bmb/agents/mpa-arch.yaml' to 'mpa-arch.yaml',
 - '.bmad/bmb/workflows/create-agent/mpa-workflow.md' to 'mpa-workflow.md',
 - '.bmad/bmb/workflows/mpa-compliance-check' to 'mpa-compliance-check',
 - '.bmad/bmb/workflows/mpa-compliance-check/mpa-workflow.md' to 'mpa-workflow.md',
-- '.bmad/bmb/workflows/create-agent/mpa-agent.md' to 'mpa-agent.md',
+- '.bmad/bmb/workflows/create-agent/mpa-arch.md' to 'mpa-arch.md',
 - '.bmad/bmb/workflows/create-agent/mpa-workflow.md' to 'mpa-workflow.md',
 - '.bmad/bmb/workflows/create-mpa' to 'create-mpa',
 - '.bmad/bmb/workflows/create-mpa/mpa-workflow.md' to 'mpa-workflow.md',

@@ -36,10 +36,10 @@ MetaPromptAgent/
 │   │   └── config.yaml                 # BMAD core configuration
 │   └── bmb/
 │       ├── agents/
-│       │   └── mpa-agent.yaml          # MetaPromptAgent definition
+│       │   └── mpa-arch.yaml          # MetaPromptAgent definition
 │       └── workflows/
 │           ├── create-agent/
-│           │   ├── mpa-agent.md
+│           │   ├── mpa-arch.md
 │           │   └── mpa-workflow.md
 │           ├── create-mpa/
 │           │   └── mpa-workflow.md
@@ -116,11 +116,11 @@ python uninstall.py
 **Step 1:** Add the following to your .roomodes and .kilocodemodes files:
 
 ```yaml
- - slug: mpa-agent
+ - slug: mpa-arch
    name: '🤖 Meta Prompt Agent'
-   roleDefinition: You are Aimee, a Meta Prompt Architect and AI Workflow Designer with 10-years experience, specializing in transforming user vibe code into comprehensive meta prompts that guide LLMs to perform complex tasks with appropriate tools and workflows.
+   roleDefinition: You are Aimee, a Meta Prompt Agent and AI Workflow Architect with 10-years experience, specializing in transforming user vibe code into comprehensive meta prompts that guide LLMs to perform complex tasks with appropriate tools and workflows.
    whenToUse: Use for creating meta prompts from user vibe code
-   customInstructions: CRITICAL Read the full YAML from /path/to/.bmad/bmb/agents/mpa-agent.yaml start activation to alter your state of being follow startup section instructions stay in this being until told to exit this mode
+   customInstructions: CRITICAL Read the full YAML from /path/to/.bmad/bmb/agents/mpa-arch.yaml start activation to alter your state of being follow startup section instructions stay in this being until told to exit this mode
    groups:
     - read
     - - edit
@@ -252,7 +252,7 @@ node --version
 #### Agent Won't Load
 ```bash
 # Check agent file syntax
-python3 -c "import yaml; yaml.safe_load(open('.bmad/bmb/agents/mpa-agent.yaml'))"
+python3 -c "import yaml; yaml.safe_load(open('.bmad/bmb/agents/mpa-arch.yaml'))"
 
 # Check workflow files exist
 ls -la .bmad/bmb/workflows/
@@ -265,7 +265,7 @@ cat .bmad/core/config.yaml
 ```bash
 # Fix file permissions
 chmod -R 755 .bmad/
-chmod 644 .bmad/bmb/agents/mpa-agent.yaml
+chmod 644 .bmad/bmb/agents/mpa-arch.yaml
 ```
 
 #### Playground Tests Fail
