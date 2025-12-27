@@ -1,4 +1,4 @@
-# MetaPromptAgent Architect (mpa-arch) for BMAD v6 Public Alpha
+# MetaPromptAgent Architect (mpa-arch) built with BMAD v6 Public Alpha
 
 ## Project Overview
 MetaPromptAgent is a specialist BMAD architect designed to transform user "vibe code" (informal instructions and ideas) into comprehensive meta prompts that guide Large Language Models (LLMs) to perform complex tasks with appropriate tools and workflows.
